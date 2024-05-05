@@ -1,0 +1,18 @@
+{
+  "name": "ecohome",
+  "version": "1.0.0",
+  "description": "Aplicación inmobiliaria que utiliza mern y tailwind css",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "dev":"nodemon api/index.js",
+    "start":"node api/index.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.19.2",
+    "nodemon": "^3.1.0"
+  }
+}
