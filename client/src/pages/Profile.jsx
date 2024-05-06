@@ -1,7 +1,22 @@
-import React from 'react'
+import { useSelector } from 'react-redux'
 
-export default function Profle() {
+export default function Profile() {
+  const { currentUser } = useSelector((state) => state.user)
   return (
-    <h1>Profle</h1>
+    <div className='p-3 max-w-lg mx-auto'>
+      <h1 className='text-3xl font-semibold text-center my-7'>
+        Profile</h1>
+      <form className='flex flex-col gap-4'>
+        <img src={currentUser.avatar} alt="profile" className='rounded-full h-24 w-24 object-cover cursor-pointer self-center mt-2' />
+        <input type="text" placeholder='Nombre de Usuario' id="username" className="border p-3 rounded-lg" />
+        <input type="email" placeholder='Correo Electronico' id="email" className="border p-3 rounded-lg" />
+        <input type="text" placeholder='Contraseña' id="password" className="border p-3 rounded-lg" />
+        <button className='bg-slate-700 text-white rounded-lg p-3 uppercase hover:opacity-95 disabled:opacity-80'>Actualizar</button>
+      </form>
+      <div className="flex justify-between">
+        <span className="text-red-700 cursor-pointer">Elimina tu Cuenta</span>
+        <span className="text-red-700 cursor-pointer">Cerrar Sesion</span>
+      </div>
+    </div>
   )
 }
