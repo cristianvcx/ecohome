@@ -73,8 +73,8 @@ export default function Listing() {
                     <p className='text-2xl font-semibold'>
                         {listing.name} - ${' '}
                         {listing.offer
-                            ? listing.discountPrice.toLocaleString('en-US')
-                            : listing.regularPrice.toLocaleString('en-US')}
+                            ? listing.discountPrice.toLocaleString('es-CL')
+                            : listing.regularPrice.toLocaleString('es-CL')}
                         {listing.type === 'rent' && ' / mes'}
                     </p>
                     <p className='flex items-center mt-6 gap-2 text-slate-600 text-sm'>
@@ -87,7 +87,9 @@ export default function Listing() {
                         </p>
                         {
                             listing.offer && (
-                                <p className='bg-green-900 w-full max-w-[200px] text-white text-center p-1 rounded-md'>${+listing.regularPrice - +listing.discountPrice}</p>
+                                <p className='bg-green-900 w-full max-w-[200px] text-white text-center p-1 rounded-md'>
+                                    ${+listing.regularPrice - +listing.discountPrice} OFERTA
+                                </p>
                             )
                         }
                     </div>
@@ -100,7 +102,7 @@ export default function Listing() {
                     <ul className='text-green-900 font-semibold text-sm flex items-center gap-4 sm:gap-6'>
                         <li className='flex items-center gap-1 whitespace-nowrap'>
                             <FaBed className='text-lg' />
-                            {listing.bedrooms > 1 ? `${listing.bedrooms} camas ` : `${listing.bedrooms} camas `}
+                            {listing.bedrooms > 1 ? `${listing.bedrooms} cama ` : `${listing.bedrooms} camas `}
                         </li>
                         <li className='flex items-center gap-1 whitespace-nowrap'>
                             <FaBath className='text-lg' />
