@@ -4,7 +4,7 @@ export default function About() {
   return (
     <div className='py-20 px-4 max-w-6xl mx-auto'>
       <h1>
-        <h1 className='text-3xl font-bold mb-4 text-slate-800'>About EcoHome</h1>
+        <h1 className='text-3xl font-bold mb-4 text-slate-800'>Acerca de EcoHome</h1>
         <p className='mb-4 text-slate-700'>
           Es una agencia inmobiliaria líder que se especializa en ayudar a los clientes a comprar, vender y alquilar propiedades en los vecindarios más atractivos. Nuestro equipo de agentes experimentados está dedicado a brindar un servicio excepcional y hacer que el proceso de compra y venta sea lo más sencillo posible.
         </p>
